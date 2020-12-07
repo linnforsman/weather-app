@@ -1,5 +1,5 @@
 body {
-  font-family: arial, sans-serif;
+  font-family: Consolas;
   background-color: rgb(0, 0, 0);
   text-emphasis-color: #1eff00;
 }
@@ -20,7 +20,8 @@ body {
 }
 
 .btn-primary {
-  background-color: #1eff00;
+  text-emphasis-color: #000000;
+  background-color: #000000;
   border-style: groove;
   border-color: #1eff00;
 }
