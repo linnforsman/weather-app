@@ -134,6 +134,10 @@ li:first-letter {
   width: 48px;
 }
 
+.i weather-temperature {
+  color: #1eff00;
+}
+
 .weather-forecast-temperature {
   text-align: center;
   color: #1eff00;
