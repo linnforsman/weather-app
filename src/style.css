@@ -12,7 +12,18 @@ body {
   text-align: center;
   text-decoration: none;
   display: inline-block;
-  font-size: 16px;
+  font-size: 15px;
+}
+
+.btn {
+  color: #1eff00;
+  background: black;
+  border: none;
+}
+
+.btn:hover {
+  color: black;
+  font-weight: bold;
 }
 
 .form-control:hover {
@@ -60,8 +71,10 @@ li:first-letter {
 }
 
 .weather-app-wrapper {
-  max-width: 600px;
+  max-width: 350px;
+  max-height: 1000px;
   margin: 30px auto;
+  margin-bottom: 0;
 }
 
 .weather-app {

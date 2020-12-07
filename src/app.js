@@ -28,19 +28,21 @@ function formatHours(timestamp) {
   return `${hours}:${minutes}`;
 }
 
-function locateMe(event) {
-  navigator.geolocation.getCurrentPosition(retrievePosition);
+function showWeather(response) {
+  let h1 = document.querySelector("h1");
+  let temperature = Math.round(response.data.main.temp);
+  h1.innerHTML = `It is currently ${temperature}° in ${response.data.name}`;
 }
+
 function retrievePosition(position) {
+  let apiKey = "5f472b7acba333cd8a035ea85a0d4d4c";
   let lat = position.coords.latitude;
   let lon = position.coords.longitude;
-  let apiKey = "41d36454e5f3ee2db06d8969a9b290b7";
-  let apiUrl = `https://api.openweathermap.org/data/2.5/weather?lat=${lat}&lon=${lon}&appid=${apiKey}&units=metric`;
-  axios.get(apiUrl).then(showTemperature);
-
-  apiUrl = `https://api.openweathermap.org/data/2.5/forecast?lat=${lat}&lon=${lon}&appid=${apiKey}&units=metric`;
-  axios.get(apiUrl).then(displayForecast);
+  let url = `https://api.openweathermap.org/data/2.5/weather?lat=${lat}&lon=${lon}&units=metric&appid=${apiKey}`;
+  axios.get(url).then(showWeather);
 }
+
+navigator.geolocation.getCurrentPosition(retrievePosition);
 
 function displayTemperature(response) {
   let temperatureElement = document.querySelector("#temperature");
