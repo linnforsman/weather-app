@@ -1,5 +1,5 @@
 body {
-  font-family: Consolas;
+  font-family: Consolas, monaco, monospace;
   background-color: rgb(0, 0, 0);
   text-emphasis-color: #1eff00;
 }
@@ -15,8 +15,14 @@ body {
   font-size: 15px;
 }
 
-.btn {
+.form-control:hover {
+  color: black;
+  background-color: #1eff00;
+}
+.button {
   color: #1eff00;
+  text-align: center;
+  font-size: 11px;
   background: black;
   border: none;
 }
@@ -24,10 +30,6 @@ body {
 .btn:hover {
   color: black;
   font-weight: bold;
-}
-
-.form-control:hover {
-  background-color: #1eff00;
 }
 
 .btn-primary {
@@ -106,13 +108,9 @@ li:first-letter {
   top: -34px;
 }
 
-.weather-temperature .active {
-  color: #1eff00;
+.weather-temperer .weather-temperature:hover {
+  color: #ffffff;
   cursor: default;
-}
-
-.weather-temperature .active:hover {
-  text-decoration: none;
 }
 
 .weather-forecast {
@@ -148,17 +146,22 @@ li:first-letter {
 
 a {
   color: #1eff00;
-  text-align: right;
+  text-align: center;
 }
 
 a:hover {
   color: white;
-  background-color: #49ff31;
+
   text-shadow: 0 0 20px #14a800, 0 0 30px #14a800, 0 0 40px #14a800,
     0 0 50px #14a800, 0 0 60px #14a800, 0 0 70px #14a800, 0 0 80px #14a800;
   color: black;
+  background-color: #49ff31;
 }
 
 small {
   color: grey;
+}
+
+.float-left {
+  color: white;
 }

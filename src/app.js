@@ -42,7 +42,12 @@ function retrievePosition(position) {
   axios.get(url).then(showWeather);
 }
 
-navigator.geolocation.getCurrentPosition(retrievePosition);
+function getCurrentPosition() {
+  navigator.geolocation.getCurrentPosition(retrievePosition);
+}
+
+let button = document.querySelector("button");
+button.addEventListener("click", getCurrentPosition);
 
 function displayTemperature(response) {
   let temperatureElement = document.querySelector("#temperature");
